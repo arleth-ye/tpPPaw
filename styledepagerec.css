@@ -1,0 +1,50 @@
+/*style pour le corps de la page*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;/* suppression des marges par défaut */
+    padding: 0;/* suppression des rembourrages par défaut */
+    display: flex;/*utilisation du modèle de boîte flexible pour aligner le contenu verticalement et horizontalement */
+    justify-content: center;/* alignement horizontal du contenu au centre */
+    align-items: center;/*alignement vertical du contenu au centre*/
+    height: 100vh;
+}
+.container {/*Style pour le conteneur des champs de saisie*/
+    background-color: #fff;/*couleur de fond du */
+    padding: 20px;/*rembourrage intérieur*/
+    border-radius: 5px;/*Bordures arrondies*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);/*ombre portée */
+    width: 300px;
+}
+h2 {/*donner un style  pour le titre principal */
+    text-align: center;
+    color: #333;/*couleur du text*/
+}
+form {/*donner un style pour la formulaire*/
+    text-align: center;
+}
+label {/* design  pour les étiquettes des champs de saisie */
+    display: block;/*affichage en bloc pour occuper toute la largeur disponible*/
+    margin-bottom: 10px; /*marge inférieure*/
+    color: #555;
+}/*Style des champs de saisie*/
+input[type="email"],
+input[type="password"] {
+    width: 100%;/*Largeur occupant toute la largeur disponible*/
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;/*bordures arrondies*/
+    border: 1px solid #ccc;/*bordure avec couleur*/
+    box-sizing: border-box;/*innclusion de la bordure dans la largeuret l'hauteur*/
+}/*style du bouton de soumission*/
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;/*suppression de la bordure*/
+    border-radius: 5px;
+    cursor: pointer;/*curseur au survol*/
+}/* Effet au survol du bouton de soumission */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

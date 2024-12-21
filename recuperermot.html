@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Récupération de mot de passe</title><!--titre de la page-->
+    <link rel="stylesheet" href="./styledepagerec.css"><!-- Inclusion du fichier CSS -->
+</head>
+<body>
+    <div class="container"><!-- définit un conteneur pour le contenu de la page.-->
+        <h2>Récupération de mot de passe</h2><!--le titre qui indique l'objectif du formulaire-->
+        <form action="reset_password.py" method="post" id="reset_password_form"><!--formulaire pour la récupération de mot de passe-->
+            <label for="email">Adresse email :</label><br><!--étiquette pour le champ de saisie de l'adresse e-mail.-->
+            <input type="email" id="email" name="email" required><br><br><!--Champ de saisie pour l'adresse e-mail-->
+            <div id="new_password_section" style="display: none;"><!--définit une section pour le champ de saisie du nouveau mot de passe, initialement masquée-->
+                <label for="new_password">Nouveau mot de passe :</label><br><!-- étiquette pour le champ de saisie du nouveau mot de passe.-->
+                <input type="password" id="new_password" name="new_password" required><br><br><!--champ de saisie pour le nouveau mot de passe-->
+            </div>
+            <input type="button" value="Réinitialiser le mot de passe" onclick="showNewPasswordField()"> <!--bouton pour afficher le champ de saisie du nouveau mot de passe-->
+            <br><br>
+            <input type="submit" value="Valider" id="submit_button" style="display: none;"><!--bouton de soumission du formulaire, initialement masqué-->
+        </form>
+    </div>
+
+    <script>//balise de script pour le code JavaScript
+        function showNewPasswordField() {// définition d'une fonction pour afficher le champ de saisie du nouveau mot de passe.
+            var newPasswordSection = document.getElementById("new_password_section");
+            var submitButton = document.getElementById("submit_button");
+
+            newPasswordSection.style.display = "block";
+            submitButton.style.display = "block";
+        }
+
+//Ajout d'un écouteur d'événements pour le formulaire de récupération de mot de passe, qui empêche la soumission par défaut et redirige vers la page d'accueil
+        document.getElementById("reset_password_form").addEventListener("submit", function(event) {
+            // empêche la soumission du formulaire par défaut
+            event.preventDefault();
+
+            // redirige vers la page d'accueil
+            window.location.href = "pagedac.html";
+        });
+    </script>
+</body>
+</html>

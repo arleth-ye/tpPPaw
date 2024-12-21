@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title><!--titre de la page-->
+    <link rel="stylesheet" href="./styleinscri.css"> <!-- Inclusion du fichier CSS -->
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Inscription</h1>
+        <form id="inscriptionForm" action="traitement_inscription.php" method="post">
+            <div class="input-box"><!--div pour un champ de saisie-->
+                <label for="username">Nom d'utilisateur :</label><!--étiquette du champ "Nom d'utilisateur"-->
+                <input id="username" type="text" placeholder="Entrez votre nom d'utilisateur" required>
+            </div>
+            <div class="input-box"><!--div pour un champ de saisie-->
+                <label for="email">Adresse email :</label><!--étiquette du champ "Adresse email"-->
+                <input id="email" type="email" placeholder="Entrez votre adresse email" required>
+            </div>
+            <div class="input-box"><!--div pour un champ de saisie-->
+                <label for="password">Mot de passe :</label><!--étiquette du champ "Mot de passe"-->
+                <input id="password" type="password" placeholder="Entrez votre mot de passe" required>
+            </div>
+            <div class="input-box"><!--div pour un champ de saisie-->
+                <label for="confirmPassword">Confirmez le mot de passe :</label><!--étiquette du champ "Confirmez le mot de passe"-->
+                <input id="confirmPassword" type="password" placeholder="Confirmez votre mot de passe" required>
+            </div>
+            <button type="submit">S'inscrire</button> <!-- bouton de soumission du formulaire -->
+        </form>
+    </div>
+    <script> function redirectToAccueil() {//définition de la fonction pour rediriger vers la page d'accueil
+        window.location.href = "pagedac.html";// Redirection vers la page d'accueil 
+    }
+
+    // Ajouter un écouteur d'événement pour la soumission du formulaire
+    document.getElementById("inscriptionForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Empêcher le formulaire de se soumettre normalement
+
+        // Appeler la fonction pour rediriger vers la page d'accueil
+        redirectToAccueil();
+    });</script>
+</body>
+</html>

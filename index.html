@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr"><!--la langue de la page :français-->
+<head>
+    <meta charset="UTF-8"><!--Définit l'encodage des caractères à UTF-8.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BitVerse    </title>
+    <!--inclusion du fichier CSS-->
+    <link rel="stylesheet" href="./pourcss/style1.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--Inclut une feuille de style CSS externe-->
+
+</head>
+<body>
+    
+    <div class="wrappaper"><!--Conteneur principal qui enveloppe le contenu du formulaire-->
+            <h1>Login</h1><!--titre du formulaire-->
+            <div class="input-box">
+                <i class='bx bxs-user'></i>
+                <input type="text" placeholder="nom d’utilisateur" required><!--Champ de saisie pour le nom d'utilisateur-->
+            </div>
+            <div class="input-box">
+                <i class='bx bxs-lock-alt'></i>
+                <input type="password" placeholder="mot de passe" required><!--Champ de saisie pour le mot de passe -->
+            </div>
+            <div class="remmember-forgot">
+                <label ><input type="checkbox" name="remember">Enregistrer le mot de passe</label><!--Case à cocher pour enregistrer le mot de passe-->
+            <a href="recuperermot.html" target="_blank">mot de passe oublié</a></div><!--Lien pour récupérer le mot de passe.-->
+            <input type="submit" value="Login" class="btn" id="loginButton"><br><br><!--Bouton de soumission du formulaire.-->
+        
+            <div class="registre-link">
+                <p> vous n'avez pas de compte?<a href="pageinscri.html" id="Inscription" target="_blank">inscrivez-vous</a></p><!--Lien pour rediriger vers la page d'inscription-->
+
+                
+            </div>
+            
+        </form>
+    </div>
+    <script>
+        
+    //fonction pour rediriger vers la page d'accueil
+    function redirectToAccueil() {
+            window.location.href = "pagedac.html";
+        }
+        
+        // Ajouter un événement de clic au bouton "Login"
+        document.getElementById("loginButton").addEventListener("click", function(event) {
+            event.preventDefault(); // Empêcher le comportement par défaut du bouton
+
+            // Appeler la fonction pour rediriger vers la page d'accueil
+            redirectToAccueil();
+        });
+
+        // Ajouter un événement de clic au lien "inscrivez-vous"
+        document.getElementById("inscription").addEventListener("click", function(event) {
+            event.preventDefault(); // Empêcher le comportement par défaut du lien
+            
+            // Appeler la fonction pour rediriger vers la page d'accueil
+            redirectToAccueil();
+        });
+
+        
+        </script>
+</body>
+</html>
